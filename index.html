@@ -3,74 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nepali Samaj | Fargo Moorhead</title>
+    <title>Nepalese Society Event</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #f6d365, #fda085);
+            line-height: 1.6;
+            background-color: #f9f9f9;
             color: #333;
         }
-        .container {
+
+        /* Header Banner */
+        header {
+            background: linear-gradient(90deg, #0033a0, #ff0000); /* Blue to Red gradient */
+            color: white;
+            padding: 15px 0;
+        }
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-text {
             text-align: center;
-            background-color: #fff;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 600px;
+            flex-grow: 1;
         }
-        h1 {
-            font-size: 5em;
-            color: #2c3e50;
-            font-weight: bold;
+        .header-text h1 {
+            font-size: 2em;
             margin: 0;
-            letter-spacing: -2px;
         }
-        h2 {
-            font-size: 2.5em;
-            color: #34495e;
-            margin-top: 20px;
-            font-weight: 400;
+        .header-text h1 span.devnagari {
+            font-size: 1em;
+            display: block;
+            margin-top: 4px;
         }
-        h3 {
-            font-size: 1.6em;
-            color: #7f8c8d;
-            margin-top: 20px;
-            font-weight: 300;
+        .header-text h1 span.location {
+            font-size: 0.9em;
+            display: block;
+            margin-top: 2px;
         }
-        a {
-            font-size: 1.3em;
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+        .header-container img {
+            height: 50px;
         }
-        a:hover {
-            color: #e74c3c;
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Event Section */
+        .event-info {
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 6px solid #0033a0;
+        }
+        .event-info h2 {
+            margin-top: 0;
+            color: #0033a0;
+        }
+        .event-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .event-info li {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .event-info a {
+            color: #0033a0;
             text-decoration: underline;
         }
-        .footer {
-            margin-top: 30px;
-            font-size: 1em;
-            color: #bdc3c7;
+        .event-info p {
+            margin-top: 15px;
+            font-size: 1.05em;
         }
-        .footer p {
-            margin: 0;
+
+        /* Contacts Section */
+        .contacts {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .contact-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            border-top: 4px solid #ff0000;
+        }
+        .contact-card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #0033a0;
+        }
+        .contact-card p {
+            margin: 5px 0;
+        }
+        .contact-card a {
+            color: #0033a0;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(90deg, #ff0000, #0033a0); /* Red to Blue gradient */
+            color: white;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
+<header>
+    <div class="header-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg" alt="Nepal Flag">
+        <div class="header-text">
+            <h1>
+                Nepalese Society
+                <span class="devnagari">नेपाली समाज</span>
+                <span class="location">Fargo – Moorhead</span>
+            </h1>
+        </div>
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA Flag">
+    </div>
+</header>
+
 <div class="container">
-    <h1>Nepali Samaj</h1>
-    <h2>Fargo Moorhead</h2>
-    <h3>Contact @ <a href="mailto:fmnepalisociety@gmail.com">fmnepalisociety@gmail.com</a></h3>
+    <section class="event-info">
+        <h2>Upcoming Event: New Year 2026 & Nepali Dhaka Topi Diwas 2082</h2>
+        <p>We are excited to invite you to celebrate with a <strong>Potluck Celebration</strong>!</p>
+        <ul>
+            <li><strong>Date:</strong> Wednesday, January 1, 2026</li>
+            <li><strong>Time:</strong> <span style="font-weight: bold;">12:00 PM – 4:00 PM (Sharp)</span></li>
+            <li><strong>Location:</strong> <a href="https://maps.app.goo.gl/icgzTECz1Ai4kYnG9" target="_blank">Niskanen Community Hall, 1762 10th St N, Fargo, ND 58105</a></li>
+        </ul>
+        <p>We’d love for you to bring your favorite dish to share! To make sure we have a nice variety and avoid duplicates, feel free to coordinate through our <strong>Facebook group</strong>.</p>
+    </section>
+
+    <section class="contacts">
+        <div class="contact-card">
+            <h3>Shyam Kandel</h3>
+            <p>President</p>
+            <p>Email: <a href="mailto:kandelsl@gmail.com">kandelsl@gmail.com</a></p>
+            <p>Phone: (509) 432-3847</p>
+        </div>
+        <div class="contact-card">
+            <h3>Krishna Acharya</h3>
+            <p>General Secretary</p>
+            <p>Email: <a href="mailto:acharyakrish87@gmail.com">acharyakrish87@gmail.com</a></p>
+            <p>Phone: (605) 592-6858</p>
+        </div>
+    </section>
 </div>
+
+<footer>
+    &copy; 2025 Nepalese Society – Fargo Moorhead | <a href="https://fmnepali.org" target="_blank">fmnepali.org</a> | Email: <a href="mailto:fmnepalisociety@gmail.com">fmnepalisociety@gmail.com</a>
+</footer>
+
 </body>
 </html>
