@@ -26,7 +26,12 @@
 
         /* Header Banner */
         header {
-            background: linear-gradient(90deg, #0033a0, #ff0000); /* Blue to Red gradient */
+            /* Blue to Red gradient */
+            background: linear-gradient(
+                    90deg,
+                    rgba(0, 51, 160, 0.8),
+                    rgba(255, 0, 0, 0.8)
+            );
             color: white;
             padding: 15px 0;
         }
@@ -56,7 +61,12 @@
             display: block;
             margin-top: 2px;
         }
-        .header-container img {
+
+        .nepal-flag {
+            height: 70px;
+        }
+
+        .us-flag {
             height: 50px;
         }
 
@@ -128,11 +138,17 @@
         footer {
             text-align: center;
             padding: 20px 0;
-            background: linear-gradient(90deg, #ff0000, #0033a0); /* Red to Blue gradient */
+            /* Red to Blue gradient */
+            background: linear-gradient(
+                    90deg,
+                    rgba(255, 0, 0, 0.8),
+                    rgba(0, 51, 160, 0.8)
+            );
             color: white;
         }
         .footer-column {
             flex: 1 1 200px;
+            margin: 30px 0;
         }
         footer a {
             color: white;
@@ -146,7 +162,7 @@
 
 <header>
     <div class="header-container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg" alt="Nepal Flag">
+        <img class="nepal-flag" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg" alt="Nepal Flag">
         <div class="header-text">
             <h1>
                 Nepalese Society
@@ -154,7 +170,7 @@
                 <span class="location">Fargo – Moorhead</span>
             </h1>
         </div>
-        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA Flag">
+        <img class="us-flag" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA Flag">
     </div>
 </header>
 
@@ -164,7 +180,7 @@
         <h2>Upcoming Event: New Year 2026 & Nepali Dhaka Topi Diwas 2082</h2>
         <p>We are excited to invite you to celebrate with a <strong>Potluck Celebration</strong>!</p>
         <ul>
-            <li><strong>Date:</strong> Thursday, January 1, 2026</li>
+            <li><strong>Date:</strong> Thursday - January 1, 2026</li>
             <li><strong>Time:</strong> <span style="font-weight: bold;">12:00 PM – 4:00 PM (Sharp)</span></li>
             <li><strong>Location:</strong> <a href="https://maps.app.goo.gl/icgzTECz1Ai4kYnG9" target="_blank">Niskanen Community Hall, 1762 10th St N, Fargo, ND 58105</a></li>
         </ul>
@@ -192,11 +208,13 @@
     <div class="footer-container">
         <div class="footer-column">
             Website: <a href="https://fmnepali.org" target="_blank">fmnepali.org</a><br>
-            Email: <a href="mailto:fmnepalisociety@gmail.com">fmnepalisociety@gmail.com</a><br />
-            Facebook-Page: <a href="https://www.facebook.com/profile.php?id=61585646061770" target="_blank">Facebook</a>
+            Facebook-Page: <a href="https://www.facebook.com/profile.php?id=61585646061770" target="_blank">Facebook</a><br>
+            Email: <a href="mailto:fmnepalisociety@gmail.com">fmnepalisociety@gmail.com</a><br>
         </div>
-        <div class="footer-column">
-            &copy; 2025 Nepalese Society of Fargo – Moorhead
+        <div>
+            &copy;
+            <script>document.write(new Date().getFullYear())</script>
+            Nepalese Society of Fargo Moorhead
         </div>
     </div>
 </footer>
