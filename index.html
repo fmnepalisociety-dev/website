@@ -12,6 +12,16 @@
             line-height: 1.6;
             background-color: #f9f9f9;
             color: #333;
+
+            /* Sticky footer setup */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main content should grow */
+        main {
+            flex: 1;
         }
 
         /* Header Banner */
@@ -121,9 +131,14 @@
             background: linear-gradient(90deg, #ff0000, #0033a0); /* Red to Blue gradient */
             color: white;
         }
+        .footer-column {
+            flex: 1 1 200px;
+        }
         footer a {
             color: white;
             text-decoration: underline;
+            display: inline-block;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -143,6 +158,7 @@
     </div>
 </header>
 
+<main>
 <div class="container">
     <section class="event-info">
         <h2>Upcoming Event: New Year 2026 & Nepali Dhaka Topi Diwas 2082</h2>
@@ -170,10 +186,21 @@
         </div>
     </section>
 </div>
+</main>
 
 <footer>
-    &copy; 2025 Nepalese Society – Fargo Moorhead | <a href="https://fmnepali.org" target="_blank">fmnepali.org</a> | Email: <a href="mailto:fmnepalisociety@gmail.com">fmnepalisociety@gmail.com</a>
+    <div class="footer-container">
+        <div class="footer-column">
+            Website: <a href="https://fmnepali.org" target="_blank">fmnepali.org</a><br>
+            Email: <a href="mailto:fmnepalisociety@gmail.com">fmnepalisociety@gmail.com</a><br />
+            Facebook-Page: <a href="https://www.facebook.com/profile.php?id=61585646061770" target="_blank">Facebook</a>
+        </div>
+        <div class="footer-column">
+            &copy; 2025 Nepalese Society of Fargo – Moorhead
+        </div>
+    </div>
 </footer>
+
 
 </body>
 </html>
