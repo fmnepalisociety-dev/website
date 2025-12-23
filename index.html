@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nepalese Society of Fargo Moorhead</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <style>
         body {
@@ -176,6 +177,15 @@
             flex: 1 1 200px;
             margin: 30px 0;
         }
+
+        .footer-link-row i {
+            width: 20px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .footer-link-row:hover i {
+            color: #ffd700;
+        }
         footer a {
             color: white;
             text-decoration: underline;
@@ -234,9 +244,18 @@
 <footer>
     <div class="footer-container">
         <div class="footer-column">
-            Website: <a href="https://fmnepali.org" target="_blank">fmnepali.org</a><br>
-            Facebook: <a href="https://www.facebook.com/profile.php?id=61585646061770" target="_blank">NSFM - Nepalese Society of Fargo Moorhead</a><br>
-            Email: <a href="mailto:fmnepalisociety@gmail.com">fmnepalisociety@gmail.com</a><br>
+            <div class="footer-link-row">
+                <i class="fa-solid fa-globe"></i>
+                <a href="https://fmnepali.org" target="_blank">fmnepali.org</a>
+            </div>
+            <div class="footer-link-row">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:fmnepalisociety@gmail.com">fmnepalisociety@gmail.com</a>
+            </div>
+            <div class="footer-link-row">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/profile.php?id=61585646061770" target="_blank">NSFM - Nepalese Society (Facebook)</a>
+            </div>
         </div>
         <div class="footer-column">
             <img src="logo.png" alt="NSFM-Logo" style="height: 100px;">
