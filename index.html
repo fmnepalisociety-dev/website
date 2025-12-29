@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -99,11 +103,55 @@
             font-weight: normal;
         }
 
+        /* Sticky Nav */
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            /* Subtle continuation of header gradient */
+            background: linear-gradient(
+                    90deg,
+                    rgba(28, 51, 130, 0.95),
+                    rgba(163, 20, 50, 0.90)
+            );
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 8px 0;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .main-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            padding: 8px 16px;
+            border-radius: 999px; /* pill style */
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        .main-nav a:hover {
+            background: rgba(255, 255, 255, 0.18);
+            color: #ffd700; /* subtle gold accent */
+        }
+
         /* Container */
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 0 20px;
+        }
+
+        section {
+            scroll-margin-top: 50px;
         }
 
         .event-image {
@@ -223,6 +271,14 @@
     </div>
 </header>
 
+<nav class="main-nav">
+    <ul>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#links">Links</a></li>
+    </ul>
+</nav>
+
 <main>
 <div class="container">
 
@@ -230,7 +286,7 @@
          class="event-image"
          alt="Nepali Society New Year 2026">
 
-    <section class="event-info">
+    <section class="event-info" id="events">
         <h2>Upcoming Event: New Year 2026 & Nepali Dhaka Topi Diwas 2082</h2>
         <p>We are excited to invite you to celebrate with a <strong>Potluck Celebration</strong>!</p>
         <ul>
@@ -241,7 +297,7 @@
         <p>We’d love for you to bring your favorite dish to share! To make sure we have a nice variety and avoid duplicates, feel free to coordinate through our <strong>Facebook group</strong>.</p>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="contact-card">
             <h3>Shyam Kandel</h3>
             <p>President</p>
@@ -260,7 +316,7 @@
 
 <footer>
     <div class="footer-container">
-        <div class="footer-column">
+        <section class="footer-column" id="links">
             <div class="footer-link-row">
                 <i class="fa-solid fa-globe"></i>
                 <a href="https://fmnepali.org" target="_blank">fmnepali.org</a>
@@ -273,7 +329,7 @@
                 <i class="fa-brands fa-facebook"></i>
                 <a href="https://www.facebook.com/profile.php?id=61585646061770" target="_blank">NSFM - Nepali Society (Facebook)</a>
             </div>
-        </div>
+        </section>
         <div class="footer-column">
             <img src="logo.png" alt="Nepali Society Fargo Moorhead Logo" style="height: 100px;">
         </div>
